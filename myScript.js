@@ -4,13 +4,14 @@ let impt_elem = document.querySelector('input');
 
 btn_elem.addEventListener('click', btnClick);
 
-function btnClick {
+function btnClick() {
     let impt_val = impt_elem.value;
-    impt_val = ' ';
+    // impt_val = ' ';
     let li_elem = document.createElement('li');
     let span_elem = document.createElement('span');
     let btn_new_elem = document.createElement('button');
     li_elem.appendChild(span_elem);
     li_elem.appendChild(btn_new_elem);
     span_elem.innerText = impt_val;
+    console.log(span_elem);
 }
