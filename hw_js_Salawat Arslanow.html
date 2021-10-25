@@ -39,7 +39,12 @@ btn_elem.addEventListener('click', btnClick);
 
 function btnClick() {
     let impt_val = impt_elem.value;
-    impt_elem.value = ' ';
+    if(impt_val == ""){
+        alert('Please enter the item');
+        impt_elem.focus();
+        return;
+    }
+    impt_elem.value = "";
     li_elem = document.createElement('li');
     let span_elem = document.createElement('span');
     let btn_new_elem = document.createElement('button');
